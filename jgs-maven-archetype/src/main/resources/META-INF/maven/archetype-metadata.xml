@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor name="ssh-shiro">
+    <fileSets>
+        <fileSet filtered="true" encoding="UTF-8">
+            <directory>src/main/java</directory>
+            <includes>
+                <include>**/*.**</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+            <directory>src/main/resources</directory>
+            <includes>
+                <include>**/*.**</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+            <directory>src/main/resources/profile/prod</directory>
+            <includes>
+                <include>**/*.**</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+            <directory>src/main/resources/profile/test</directory>
+            <includes>
+                <include>**/*.**</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+            <directory>src/main/resources/profile/dev</directory>
+            <includes>
+                <include>**/*.**</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+            <directory>src/test/java</directory>
+            <includes>
+                <include>**/*.**</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+            <directory>src/main/webapp</directory>
+            <includes>
+                <include>**/*.**</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+</archetype-descriptor>
+<!--<archetype xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype/1.0.0"-->
+           <!--xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+           <!--xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype/1.0.0 http://maven.apache.org/xsd/archetype-1.0.0.xsd">-->
+    <!--<id>jgs-maven-archetype</id>-->
+    <!--<sources>-->
+        <!--<source>src/main/java</source>-->
+    <!--</sources>-->
+    <!--<resources>-->
+        <!--<resource>src/main/resources</resource>-->
+        <!--&lt;!&ndash;<resource>src/main/resources/profile</resource>&ndash;&gt;-->
+        <!--&lt;!&ndash;<resource>src/main/resources/profile/dev</resource>&ndash;&gt;-->
+        <!--&lt;!&ndash;<resource>src/main/resources/profile/test</resource>&ndash;&gt;-->
+        <!--&lt;!&ndash;<resource>src/main/resources/profile/prod</resource>&ndash;&gt;-->
+    <!--</resources>-->
+    <!--<testSources>-->
+        <!--<source>src/test/java/AppTest.java</source>-->
+    <!--</testSources>-->
+    <!--<testResources>-->
+        <!--<resource>src/test/resources</resource>-->
+    <!--</testResources>-->
+<!--</archetype>-->
