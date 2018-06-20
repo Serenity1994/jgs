@@ -10,6 +10,8 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>../jgs-maven</module>
+        <module>../jgs-maven-archetype</module>
+        <module>../jgs-design-pattern</module>
     </modules>
 
     <distributionManagement>
