@@ -1,38 +1,19 @@
 package com.jgs.designpattern.creational.singleton_pattern;
 
+import java.io.Serializable;
+
 /**
  * 饿汉式
  */
-public class SingletonPattern_1 {
+public class SingletonPattern_1 implements Serializable {
     private static SingletonPattern_1 instance = new SingletonPattern_1();
 
     public static SingletonPattern_1 getInstance() {
-        System.out.println("get instance...");
         return instance;
     }
 
-    static {
-        System.out.println("static");
+    // 不添加该方法则会出现 反序列化时出现多个实例的问题
+    public Object readResolve() {
+        return instance;
     }
-
-    {
-        System.out.println("class block");
-    }
-
-    private SingletonPattern_1() {
-        System.out.println("init...");
-    }
-
-    public void run() {
-        System.out.println("run...");
-    }
-
-    public static void main(String[] args) {
-        SingletonPattern_1 instance = SingletonPattern_1.getInstance();
-        instance.run();
-        SingletonPattern_1 instance1 = SingletonPattern_1.getInstance();
-        instance1.run();
-        System.out.println(instance == instance1);
-    }
-
 }

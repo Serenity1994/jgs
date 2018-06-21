@@ -2,36 +2,43 @@ package com.jgs.designpattern.creational.singleton_pattern;
 
 import org.junit.Test;
 
+import java.io.*;
+
 public class SingletonPatternTest {
     @Test
     public void test() {
-        SingletonPattern_4 instance = SingletonPattern_4.INSTANCE;
+        File file = new File("singleton");
+        ObjectOutputStream oos = null;
+        ObjectInputStream ois = null;
+        try {
+            oos = new ObjectOutputStream(new FileOutputStream(file));
+            SingletonPattern_1 instance = SingletonPattern_1.getInstance();
+            oos.writeObject(instance);
+            oos.close();
+            ois = new ObjectInputStream(new FileInputStream(file));
+            SingletonPattern_1 instance1 = (SingletonPattern_1)ois.readObject();
+            System.out.println(instance == instance1);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Test
     public void test1() {
-//        SingletonPattern_1 instance = SingletonPattern_1.getInstance();
-//        instance.run();
-//        SingletonPattern_1 instance1 = SingletonPattern_1.getInstance();
-//        instance1.run();
-//        System.out.println(instance == instance1);
-    }
-
-    @Test
-    public void testEnum() {
-        SingletonPattern_4 instance1 = SingletonPattern_4.INSTANCE;
-        instance1.run();
-        SingletonPattern_4 instance2 = SingletonPattern_4.INSTANCE;
-        instance2.run();
-        System.out.println(instance1 == instance2);//true
-    }
-
-    @Test
-    public void test11(){
-        TestClassLoader testClassLoader = new TestClassLoader();
-        testClassLoader.run();
-        TestClassLoader testClassLoader1 = new TestClassLoader();
-        testClassLoader1.run();
+        File file = new File("singleton");
+        ObjectOutputStream oos = null;
+        ObjectInputStream ois = null;
+        try {
+            oos = new ObjectOutputStream(new FileOutputStream(file));
+            SingletonPattern_4 instance = SingletonPattern_4.INSTANCE;
+            oos.writeObject(instance);
+            oos.close();
+            ois = new ObjectInputStream(new FileInputStream(file));
+            SingletonPattern_4 instance1 = (SingletonPattern_4)ois.readObject();
+            System.out.println(instance == instance1);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
 
